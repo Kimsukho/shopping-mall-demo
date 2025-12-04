@@ -1,0 +1,52 @@
+{
+  "name": "Shopping Mall API",
+  "description": "Shopping mall demo server - Node.js Express API",
+  "repository": "https://github.com/Kimsukho/shopping-mall-demo",
+  "logo": "",
+  "keywords": [
+    "node",
+    "express",
+    "mongodb",
+    "api",
+    "shopping-mall"
+  ],
+  "image": "heroku/nodejs",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "env": {
+    "NODE_ENV": {
+      "description": "Node environment",
+      "value": "production"
+    },
+    "MONGODB_ATLAS_URL": {
+      "description": "MongoDB Atlas connection string",
+      "required": true
+    },
+    "JWT_SECRET": {
+      "description": "Secret key for JWT token generation",
+      "required": true,
+      "generator": "secret"
+    },
+    "JWT_EXPIRES_IN": {
+      "description": "JWT token expiration time",
+      "value": "7d"
+    },
+    "CLIENT_URL": {
+      "description": "Client application URL (Vercel deployment)",
+      "required": true
+    }
+  },
+  "scripts": {
+    "postdeploy": "echo 'Deployment successful'"
+  }
+}
+

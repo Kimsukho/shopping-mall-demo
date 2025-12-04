@@ -3,7 +3,7 @@ const { User } = require('../models');
 
 // JWT 시크릿 키 가져오기
 const getJwtSecret = () => {
-  return process.env.JWT_SECRET || 'your-secret-key-change-in-production';
+  return process.env.JWT_SECRET;
 };
 
 // Authorization 헤더에서 토큰 추출
