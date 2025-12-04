@@ -78,6 +78,10 @@ yarn.lock
 pnpm-lock.yaml
 .pnpm-store/
 
+# Documentation (optional)
+DEPLOYMENT_GUIDE.md
+ENV_EXAMPLE.md
+
 # Misc
 *.pem
 *.key
